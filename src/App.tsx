@@ -223,7 +223,7 @@ function App() {
                     {typingFirstLine ? (
                       <>
                         <TypewriterText 
-                          text="largest_hackathon.exe" 
+                          text="lrgst_hckthn.exe" 
                           onComplete={() => {
                             setTypingFirstLine(false);
                           }}
@@ -231,7 +231,7 @@ function App() {
                         <span className="ml-1 animate-pulse">█</span>
                       </>
                     ) : (
-                      "largest_hackathon.exe"
+                      "lrgst_hckthn.exe"
                     )}
                   </span>
                 </div>
@@ -278,9 +278,9 @@ function App() {
           <div className="space-y-8 animate-fadeIn">
             <h1 className="text-5xl font-bold glitch-text">WORLD'S LARGEST HACKATHON</h1>
             <div className="space-y-2 text-xl">
-              <p className="flex items-center justify-center"><MapPinIcon />_location = <TerminalValue value="cyberspace" /></p>
-              <p className="flex items-center justify-center"><CalendarIcon />_date = <TerminalValue value="tbd" /></p>
-              <p className="flex items-center justify-center"><TrophyIcon />_prizes = <TerminalValue value="1_million_USD" /></p>
+              <p className="flex items-center justify-center"><MapPinIcon />_location =<TerminalValue value=" cyberspace" /></p>
+              <p className="flex items-center justify-center"><CalendarIcon />_date =<TerminalValue value=" tbd" /></p>
+              <p className="flex items-center justify-center"><TrophyIcon />_prizes =<TerminalValue value=" 1_million_USD" /></p>
             </div>
           </div>
         </div>
