@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
+import { Trophy } from 'lucide-react';
 
 // Simple SVG icons instead of using Lucide React to avoid resource issues
 const TerminalIcon = () => (
@@ -9,16 +10,7 @@ const TerminalIcon = () => (
 );
 
 const TrophyIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2">
-    <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
-    <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
-    <path d="M4 22h16"></path>
-    <path d="M10 14.66V17c0 .55-.47 1.92-2 2"></path>
-    <path d="M14 14.66V17c0 .55.47 1.92 2 2"></path>
-    <path d="M12 2v8"></path>
-    <path d="M12 10 8.5 9 2 9"></path>
-    <path d="M12 10 15.5 9 22 9"></path>
-  </svg>
+  <Trophy className="mr-2" />
 );
 
 const MapPinIcon = () => (
