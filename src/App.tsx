@@ -295,9 +295,18 @@ function App() {
         <div className="mt-32">
           <h2 className="text-3xl text-center mb-16 glitch-text">// SPONSORS</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[...Array(4)].map((_, index) => (
-              <div key={index} className="aspect-square border-2 border-green-500 rounded-lg hover:border-green-400 transition-all" />
-            ))}
+            <div className="flex items-center justify-center aspect-square border-2 border-green-500 rounded-lg hover:border-green-400 transition-all p-4">
+              <div className="text-xl font-mono text-green-400">ACME Corp</div>
+            </div>
+            <div className="flex items-center justify-center aspect-square border-2 border-green-500 rounded-lg hover:border-green-400 transition-all p-4">
+              <div className="text-xl font-mono text-green-400">Quantum Solutions</div>
+            </div>
+            <div className="flex items-center justify-center aspect-square border-2 border-green-500 rounded-lg hover:border-green-400 transition-all p-4">
+              <div className="text-xl font-mono text-green-400">Cipher Security</div>
+            </div>
+            <div className="flex items-center justify-center aspect-square border-2 border-green-500 rounded-lg hover:border-green-400 transition-all p-4">
+              <div className="text-xl font-mono text-green-400">NexGen Labs</div>
+            </div>
           </div>
         </div>
       </div>
