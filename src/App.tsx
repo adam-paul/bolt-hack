@@ -239,7 +239,7 @@ function App() {
                     <span className="ml-8"></span>
                     <span>
                       <TypewriterText 
-                        text="./execute" 
+                        text=".\/execute" 
                         onComplete={() => {
                           setTimeout(() => {
                             setTypingComplete(true);
