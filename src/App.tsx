@@ -41,21 +41,26 @@ function TypewriterText({ text, onComplete }: { text: string; onComplete?: () =>
   const [displayText, setDisplayText] = useState('');
   
   useEffect(() => {
+    // Reset display text when component mounts or text changes
+    setDisplayText('');
     let index = 0;
+    
     const timer = setInterval(() => {
       if (index < text.length) {
-        setDisplayText(prev => prev + text[index]);
+        setDisplayText((prev) => prev + text.charAt(index));
         index++;
       } else {
         clearInterval(timer);
-        onComplete?.();
+        if (onComplete) {
+          onComplete();
+        }
       }
     }, 100);
     
+    // Cleanup timer on unmount or text change
     return () => clearInterval(timer);
   }, [text, onComplete]);
 
-  // Just return the text without any additional elements
   return displayText;
 }
 
