@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Matrix';
+  src: url('https://fonts.cdnfonts.com/css/matrix') format('woff2');
+}
+
+.matrix-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  filter: blur(0.2px);
+}
+
+.matrix-column {
+  position: absolute;
+  top: -100px;
+  width: 30px;
+  color: #0f0;
+  font-size: 1.2rem;
+  text-align: center;
+  opacity: 0;
+  animation-name: matrix-fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.matrix-symbol {
+  display: block;
+  line-height: 1;
+  text-shadow: 0 0 5px #0f0;
+  transform-origin: center;
+  opacity: 0;
+  animation: symbol-flicker 0.15s linear infinite;
+}
+
+@keyframes matrix-fall {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.7;
+  }
+  95% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(calc(100vh + 100px));
+    opacity: 0;
+  }
+}
+
+@keyframes symbol-flicker {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+                -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+                -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  14% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+                -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+                -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  15% {
+    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+                0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+                -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  49% {
+    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+                0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+                -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  50% {
+    text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+                0.05em 0 0 rgba(0, 255, 0, 0.75),
+                0 -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  99% {
+    text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+                0.05em 0 0 rgba(0, 255, 0, 0.75),
+                0 -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  100% {
+    text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75),
+                -0.025em -0.025em 0 rgba(0, 255, 0, 0.75),
+                -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+}
+
+.glitch-text {
+  animation: glitch 1s linear infinite;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in forwards;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.fade-out {
+  animation: fadeOut 1.5s ease-out forwards;
+}
+
+.text-glow {
+  text-shadow: 0 0 8px rgba(0, 255, 0, 0.8);
+}
