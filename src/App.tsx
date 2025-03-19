@@ -1,6 +1,16 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Trophy } from 'lucide-react';
 
+// Terminal-style text with blinking cursor
+function TerminalValue({ value }: { value: string }) {
+  return (
+    <span className="bg-green-500/50 text-white px-2 py-1 rounded-none">
+      {value}
+      <span className="inline-block w-2 h-5 ml-1 animate-blink">█</span>
+    </span>
+  );
+}
+
 // Simple SVG icons instead of using Lucide React to avoid resource issues
 const TerminalIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2">
@@ -268,9 +278,9 @@ function App() {
           <div className="space-y-8 animate-fadeIn">
             <h1 className="text-5xl font-bold glitch-text">WORLD'S LARGEST HACKATHON</h1>
             <div className="space-y-2 text-xl">
-              <p className="flex items-center justify-center"><MapPinIcon />_location = cyberspace</p>
-              <p className="flex items-center justify-center"><CalendarIcon />_date = tbd</p>
-              <p className="flex items-center justify-center"><TrophyIcon />_prizes = 1_million_USD</p>
+              <p className="flex items-center justify-center"><MapPinIcon />_location = <TerminalValue value="cyberspace" /></p>
+              <p className="flex items-center justify-center"><CalendarIcon />_date = <TerminalValue value="tbd" /></p>
+              <p className="flex items-center justify-center"><TrophyIcon />_prizes = <TerminalValue value="1_million_USD" /></p>
             </div>
           </div>
         </div>

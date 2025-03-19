@@ -10,6 +10,7 @@ export default {
         pulse: 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         fadeIn: 'fadeIn 0.5s ease-in forwards',
         fadeOut: 'fadeOut 1.5s ease-out forwards',
+        blink: 'blink 1s step-end infinite',
       },
       keyframes: {
         pulse: {
@@ -23,6 +24,11 @@ export default {
         fadeOut: {
           'from': { opacity: 1 },
           'to': { opacity: 0 },
+        },
+        blink: {
+          '0%': { opacity: 1 },
+          '50%': { opacity: 0 },
+          '100%': { opacity: 1 },
         },
       },
     },
