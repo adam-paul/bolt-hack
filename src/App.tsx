@@ -266,7 +266,7 @@ function App() {
       <div className={`relative z-10 container mx-auto px-4 py-16 transition-opacity duration-1000 ${stage === 'content' ? 'opacity-100' : 'opacity-0'}`}>
         <div className="text-center mb-20">
           <div className="space-y-8 animate-fadeIn">
-            <h1 className="text-5xl font-bold glitch-text">World's Largest Hackathon</h1>
+            <h1 className="text-5xl font-bold glitch-text">WORLD'S LARGEST HACKATHON</h1>
             <div className="space-y-2 text-xl">
               <p className="flex items-center justify-center"><MapPinIcon />_location = cyberspace</p>
               <p className="flex items-center justify-center"><CalendarIcon />_date = tbd</p>
